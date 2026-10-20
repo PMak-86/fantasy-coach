@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#0b1220">
+  <meta name="description" content="Fantasy Coach is a private, non-commercial fantasy basketball analytics project supporting weekly 9-category and dynasty Yahoo Fantasy leagues. Currently in development.">
+  <title>Fantasy Coach — Fantasy Basketball Analytics</title>
+  <style>
+    :root{color-scheme:dark;--bg:#0b1220;--panel:#121e31;--card:#17253a;--text:#f3f7ff;--muted:#b5c4d8;--border:rgba(182,205,238,.17);--accent:#6cebc4;--blue:#98bffc}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(circle at 90% 2%,#182e45 0%,transparent 35%),radial-gradient(circle at 0% 45%,#102c36 0%,transparent 40%),var(--bg);font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;line-height:1.6;color:var(--text)}
+    a{color:var(--accent)}a:focus-visible{outline:2px solid var(--accent);outline-offset:5px}p{margin:.6em 0 1.3em}.container{width:min(1080px,calc(100% - 42px));margin:auto}
+    header{border-bottom:1px solid var(--border)}.nav{min-height:74px;display:flex;justify-content:space-between;align-items:center;gap:20px}.brand{display:flex;align-items:center;gap:11px;font-size:20px;font-weight:800;letter-spacing:-.04em}.mark{width:32px;height:32px;border-radius:10px;background:var(--accent);display:grid;place-items:center;color:#071d22;font-size:20px;font-weight:900}.nav-note{font-size:13px;color:var(--muted)}
+    .hero{padding:105px 0 75px}.eyebrow{display:inline-flex;align-items:center;gap:8px;border:1px solid #406d69;border-radius:99px;color:var(--accent);background:rgba(108,235,196,.08);padding:6px 13px;font-size:13px;font-weight:750;letter-spacing:.06em;text-transform:uppercase}.pulse{background:var(--accent);width:7px;height:7px;border-radius:50%;display:inline-block}
+    h1{font-size:clamp(43px,7.2vw,82px);letter-spacing:-.075em;line-height:1.05;max-width:900px;margin:26px 0 24px}h1 span{color:var(--accent)}.lead{font-size:clamp(17px,2.3vw,21px);line-height:1.65;color:var(--muted);max-width:710px}.pills{display:flex;gap:10px;flex-wrap:wrap;margin-top:26px}.pill{border:1px solid var(--border);background:#172437;border-radius:99px;padding:7px 13px;font-size:13px;color:#dbe8f9;font-weight:650}
+    section{padding:38px 0 64px}h2{font-size:clamp(26px,3.6vw,37px);letter-spacing:-.045em;line-height:1.15;margin:0 0 14px}.sub{color:var(--muted);max-width:690px;margin-bottom:28px}h3{margin:0 0 8px;font-size:20px;letter-spacing:-.02em}.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:17px}.feature{border:1px solid var(--border);background:linear-gradient(135deg,#17263b,#101d2d);border-radius:18px;padding:26px;min-height:165px}.feature p{margin:0;color:var(--muted);font-size:15px}.ico{font-size:22px;margin-bottom:15px;width:40px;height:40px;background:#23394d;color:var(--accent);display:grid;place-items:center;border-radius:12px}
+    .two-col{display:grid;grid-template-columns:1fr 1fr;gap:17px}.league{border:1px solid var(--border);background:var(--panel);padding:28px;border-radius:18px}.tag{display:inline-block;padding:3px 10px;border-radius:8px;background:rgba(152,191,252,.1);border:1px solid rgba(152,191,252,.28);color:var(--blue);font-size:12px;font-weight:750;margin-bottom:16px}.league p{color:var(--muted);font-size:15px}.bullets{margin:12px 0 0;padding-left:20px;color:#dce9f7}.bullets li{margin:7px 0}
+    .api{border:1px solid rgba(108,235,196,.35);background:linear-gradient(120deg,rgba(108,235,196,.09),rgba(152,191,252,.06));border-radius:18px;padding:30px;display:grid;grid-template-columns:1fr 1fr;gap:22px;align-items:start}.api p{color:var(--muted);margin-bottom:0}.api-items{display:grid;gap:10px}.api-item{display:flex;gap:10px;align-items:start;font-size:14px;color:#dce9f7}.tick{color:var(--accent);font-weight:900}.tiny{color:var(--muted);font-size:13px}
+    footer{border-top:1px solid var(--border);padding:32px 0 50px;font-size:13px;color:var(--muted)}.footer-row{display:flex;justify-content:space-between;gap:18px;flex-wrap:wrap}.footer-row a{color:#cde8f1}.footer-note{max-width:820px;margin-top:18px;line-height:1.7}
+    @media(max-width:720px){.hero{padding:68px 0 48px}.grid,.two-col,.api{grid-template-columns:1fr}.feature{min-height:0}.nav-note{font-size:11px}section{padding:28px 0 48px}h1{letter-spacing:-.06em}.api{padding:24px}}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <div class="brand"><span class="mark" aria-hidden="true">F</span> Fantasy Coach</div>
+      <div class="nav-note">Personal project · In development</div>
+    </div>
+  </header>
+  <main>
+    <section class="container hero" aria-labelledby="page-title">
+      <div class="eyebrow"><span class="pulse" aria-hidden="true"></span> In development</div>
+      <h1>Two leagues.<br><span>One smarter game plan.</span></h1>
+      <p class="lead">Fantasy Coach is a personal, non-commercial fantasy basketball analytics project designed to help one manager make more informed lineup, matchup, waiver and trade decisions across standard and dynasty leagues.</p>
+      <div class="pills" aria-label="Project focus">
+        <span class="pill">NBA fantasy basketball</span>
+        <span class="pill">Head-to-head 9-category</span>
+        <span class="pill">Weekly roster planning</span>
+        <span class="pill">Dynasty analysis</span>
+      </div>
+    </section>
+    <section class="container" aria-labelledby="features-heading">
+      <h2 id="features-heading">Planned coaching features</h2>
+      <p class="sub">Data-driven recommendations tailored to each league's scoring settings and competition format. These capabilities are planned and not yet live.</p>
+      <div class="grid">
+        <article class="feature"><div class="ico" aria-hidden="true">↗</div><h3>Weekly lineup optimiser</h3><p>Compare eligible players, projected availability and scheduled games to recommend the strongest weekly-locked roster.</p></article>
+        <article class="feature"><div class="ico" aria-hidden="true">◫</div><h3>9-category matchup forecasts</h3><p>Analyse opponent rosters and projected category strengths to identify opportunities in head-to-head matchups.</p></article>
+        <article class="feature"><div class="ico" aria-hidden="true">⌕</div><h3>Waiver wire insights</h3><p>Find potentially useful available players based on roster needs, schedules and category contribution.</p></article>
+        <article class="feature"><div class="ico" aria-hidden="true">⇄</div><h3>Trade and dynasty evaluations</h3><p>Assess current-season impact while considering longer-term player value in dynasty competition.</p></article>
+      </div>
+    </section>
+    <section class="container" aria-labelledby="leagues-heading">
+      <h2 id="leagues-heading">Built for two league formats</h2>
+      <p class="sub">A single private dashboard is planned to manage two existing Yahoo Fantasy Basketball leagues associated with one account.</p>
+      <div class="two-col">
+        <article class="league"><div class="tag">STANDARD</div><h3>Weekly competition</h3><p>Short-term optimisation focused on getting the best output from each week's fixed starting lineup.</p><ul class="bullets"><li>Lineup recommendations</li><li>Category-by-category predictions</li><li>Schedule and waiver evaluation</li></ul></article>
+        <article class="league"><div class="tag">DYNASTY</div><h3>Long-term roster building</h3><p>Balance this season's chances with the future outlook of developing players and established veterans.</p><ul class="bullets"><li>Player age and development outlook</li><li>Multi-season trade evaluation</li><li>Prospect and keeper tracking</li></ul></article>
+      </div>
+    </section>
+    <section class="container" aria-labelledby="integration-heading">
+      <div class="api">
+        <div><h2 id="integration-heading">Planned Yahoo Fantasy integration</h2><p>Fantasy Coach is seeking approval to use the Yahoo Fantasy Sports API. The proposed integration will access only the league information required to generate personal fantasy basketball analysis.</p><p class="tiny">No Yahoo account connection or live Yahoo data access is implemented on this website.</p></div>
+        <div class="api-items" aria-label="Requested data and limits">
+          <div class="api-item"><span class="tick">✓</span> Read-only league settings and scoring categories</div>
+          <div class="api-item"><span class="tick">✓</span> Team rosters and player statistics</div>
+          <div class="api-item"><span class="tick">✓</span> Matchups, standings and schedules</div>
+          <div class="api-item"><span class="tick">✓</span> Available players and relevant transaction information</div>
+          <div class="api-item"><span class="tick">✓</span> Yahoo OAuth authentication when implemented</div>
+          <div class="api-item"><span class="tick">✓</span> Initially one user; no public registration or commercial offering</div>
+          <div class="api-item"><span class="tick">✓</span> No lineup changes, trades or other write operations through the API</div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <div class="container">
+      <div class="footer-row"><strong style="color:var(--text)">Fantasy Coach</strong><span>Independent, non-commercial development project · 2026</span></div>
+      <div class="footer-note">Fantasy data provided by <a href="https://basketball.fantasysports.yahoo.com/" rel="noopener noreferrer">Yahoo Fantasy</a> when API integration becomes available. Fantasy Coach is an independently developed project and is not affiliated with or endorsed by Yahoo. This informational page does not request login credentials, set tracking cookies or collect visitor-submitted personal data. Planned features are subject to development and API approval.</div>
+    </div>
+  </footer>
+</body>
+</html>
